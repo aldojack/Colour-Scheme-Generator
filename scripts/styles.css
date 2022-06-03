@@ -1,0 +1,49 @@
+*,*::before,*::after{
+    box-sizing: border-box;
+}
+.grid{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: 5% 1fr 10%;
+    grid-template-areas: "picker dropdown dropdown dropdown submit"
+                         "shade1 shade2 shade3 shade4 shade5"
+                         "hex1   hex2   hex3   hex4   hex5";
+    row-gap: 0.25em;
+}
+.colour-shade{
+    width: 100%;
+    background-color: antiquewhite;
+    border: solid blue 1px;
+    /* height: 60vh; */
+}
+
+/* Grid template */
+#seed-picker{
+    grid-area: picker;
+    align-self: center;
+    justify-self: center;
+}
+#mode-list{
+    grid-area: dropdown;
+    margin-right: 1em;
+}
+#submit{
+    grid-area: submit;
+}
+
+#shade1{
+    grid-area: shade1;
+}
+#shade2{
+    grid-area: shade2;
+}
+#shade3{
+    grid-area: shade3;
+}
+#shade4{
+    grid-area: shade4;
+}
+#shade5{
+    grid-area: shade5;
+}
