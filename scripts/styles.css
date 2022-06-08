@@ -1,21 +1,34 @@
 *,*::before,*::after{
     box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 .grid{
     height: 100vh;
     display: grid;
     grid-template-columns: repeat(5,1fr);
-    grid-template-rows: 5% 1fr 10%;
+    grid-template-rows: 5% 1fr 5%;
     grid-template-areas: "picker dropdown dropdown dropdown submit"
-                         "shade1 shade2 shade3 shade4 shade5"
-                         "hex1   hex2   hex3   hex4   hex5";
+                         "shades shades shades shades shades"
+                         "footer footer footer footer footer";
     row-gap: 0.25em;
+}
+
+.container{
+    display: flex;
 }
 .colour-shade{
     width: 100%;
     background-color: antiquewhite;
-    border: solid blue 1px;
-    /* height: 60vh; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: azure;
+}
+
+.colour-shade:hover{
+    opacity: 0.8;
+    cursor: pointer;
 }
 
 /* Grid template */
@@ -32,18 +45,12 @@
     grid-area: submit;
 }
 
-#shade1{
-    grid-area: shade1;
+#shades-container{
+    grid-area: shades;
 }
-#shade2{
-    grid-area: shade2;
-}
-#shade3{
-    grid-area: shade3;
-}
-#shade4{
-    grid-area: shade4;
-}
-#shade5{
-    grid-area: shade5;
+
+footer{
+    grid-area: footer;
+    align-items: center;
+    justify-content: center;
 }
