@@ -8,7 +8,7 @@
     display: grid;
     grid-template-columns: repeat(5,1fr);
     grid-template-rows: 5% 1fr 5%;
-    grid-template-areas: "picker dropdown dropdown dropdown submit"
+    grid-template-areas: "picker dropdown dropdown dropdown . "
                          "shades shades shades shades shades"
                          "footer footer footer footer footer";
     row-gap: 0.25em;
@@ -40,9 +40,6 @@
 #mode-list{
     grid-area: dropdown;
     margin-right: 1em;
-}
-#submit{
-    grid-area: submit;
 }
 
 #shades-container{
